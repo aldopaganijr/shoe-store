@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react'
 import "./Navigation.scss"
 import { Outlet, Link } from 'react-router-dom'
+import {GiFireZone} from  "react-icons/gi"
+import {FaSignInAlt} from  "react-icons/fa"
 
 const Navigation = () => {
 
@@ -8,11 +10,11 @@ const Navigation = () => {
     <Fragment>
       <div className='navigation-conatiner'>
           <div className='head-links'>
-            <Link className='top-link' to="/">
-              Home
+            <Link className='logo' to="/">
+              <GiFireZone />
             </Link>
             <Link className='top-link' to="/Authentication">
-              Sign In
+              <FaSignInAlt />
             </Link>
           </div>
           <div className='main-links'>

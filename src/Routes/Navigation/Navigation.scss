@@ -1,20 +1,51 @@
 
+// MAIN NAV
 .main-links{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #F5F5F5;
     width: 100%;
-}
 
-.head-links{
-    display: flex;
-    justify-content: space-between;
-    background-color: #FFFFFF;
-    width: 100%;
-    padding: 20px;
+    @media (max-width: 450px){
+        font-size: .7rem;
+        padding: 12px;
+    }
 }
 
 .links{
     padding: 15px;
+    
+    @media (max-width: 450px){
+        padding: 10px;
+    }
+}
+
+// LOGO AND SIGN IN
+.head-links{
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;   
+    width: 100%;
+    padding: 5px 20px;
+}
+
+.logo{
+    font-size: 3rem;
+    color: rgb(180,58,74);
+
+    @media (max-width: 450px){
+        font-size: 2rem;
+    }
+}
+
+.top-link{
+    font-size: 2rem;
+    color: rgb(180,58,74);
+    padding-top: .7rem;
+
+    @media (max-width: 450px){
+        font-size: 1.5rem;
+        padding-top: .5rem;
+    }
 }
