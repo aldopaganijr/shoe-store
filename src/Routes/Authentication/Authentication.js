@@ -1,12 +1,13 @@
 import React from 'react'
 import "./Authentication.scss"
+import SignIn from "../../Components/SignIn/SignIn"
 
 const Authentication = () => {
 
   return (
 
     <div>
-        This is Sign In
+        <SignIn />
     </div>
 
   )

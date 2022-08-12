@@ -1,6 +1,6 @@
 import React from 'react'
 import "./BannerThree.scss"
-import Mens from "../../Assets/mens.jpeg"
+import Mens from "../../Assets/Banners/mens.jpeg"
 
 const BannerThree = () => {
 

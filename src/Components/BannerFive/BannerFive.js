@@ -1,6 +1,6 @@
 import React from 'react'
 import "./BannerFive.scss"
-import Kids from "../../Assets/kids.jpeg";
+import Kids from "../../Assets/Banners/kids.jpeg";
 
 const BannerFive = () => {
 

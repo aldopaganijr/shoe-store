@@ -1,9 +1,9 @@
 import React from 'react'
 import "./BannerTwo.scss"
-import NikeFour from "../../Assets/4.jpeg"
-import NikeFive from "../../Assets/5.jpeg"
-import NikeSix from "../../Assets/6.jpeg"
-import NikeBanner from "../../Assets/nike banner.jpeg"
+import NikeFour from "../../Assets/Banners/4.jpeg"
+import NikeFive from "../../Assets/Banners/5.jpeg"
+import NikeSix from "../../Assets/Banners/6.jpeg"
+import NikeBanner from "../../Assets/Banners/nike banner.jpeg"
 
 
 

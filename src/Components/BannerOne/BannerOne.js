@@ -1,8 +1,8 @@
 import React from 'react'
 import "./BannerOne.scss"
-import NikeOne from "../../Assets/1.jpeg"
-import NikeTwo from "../../Assets/2.jpeg"
-import NikeThree from "../../Assets/3.jpeg"
+import NikeOne from "../../Assets/Banners/1.jpeg"
+import NikeTwo from "../../Assets/Banners/2.jpeg"
+import NikeThree from "../../Assets/Banners/3.jpeg"
 
 const BannerOne = () => {
 
