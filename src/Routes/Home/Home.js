@@ -1,12 +1,13 @@
 import React from 'react'
 import "./Home.scss"
+import BannerTwo from '../../Components/BannerTwo/BannerTwo'
 
 const Home = () => {
 
   return (
 
     <div>
-        This is Home
+        <BannerTwo />
     </div>
 
   )

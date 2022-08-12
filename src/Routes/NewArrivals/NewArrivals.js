@@ -1,12 +1,13 @@
 import React from 'react'
 import "./NewArrivals.scss"
+import BannerOne from '../../Components/BannerOne/BannerOne'
 
 const NewArrivals = () => {
 
   return (
 
     <div>
-        This is New Arrivals
+      <BannerOne />
     </div>
 
   )

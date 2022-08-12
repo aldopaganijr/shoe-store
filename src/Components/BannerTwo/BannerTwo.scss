@@ -1,0 +1,35 @@
+.BannerTwo-Container{
+    display: flex;
+    flex-direction: column;
+}
+
+.three-color-images{
+    display: flex;
+    flex-direction: row;
+}
+
+.banner-two-images{
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+}
+
+.nike-banner-container{
+    display: flex;
+    position: relative;
+    color: white;
+}
+
+.reseller{
+    position: absolute;
+    top: 240px;
+    left: 50px;
+    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.nike-banner{
+    width: 100%;
+    height: 320px;
+    padding: 10px;
+}
