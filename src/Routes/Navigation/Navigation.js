@@ -3,6 +3,7 @@ import "./Navigation.scss"
 import { Outlet, Link } from 'react-router-dom'
 import {GiFireZone} from  "react-icons/gi"
 import {FaSignInAlt} from  "react-icons/fa"
+import Promo from  "../../Components/Promo/Promo"
 
 const Navigation = () => {
 
@@ -34,8 +35,8 @@ const Navigation = () => {
               Sale
             </Link>
           </div>
-
       </div>
+      <Promo />
       <Outlet />
     </Fragment>
   )

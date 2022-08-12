@@ -4,8 +4,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F5F5F5;
+    background-color: #FFFFFF;
     width: 100%;
+    padding: 15px;
 
     @media (max-width: 450px){
         font-size: .7rem;
@@ -25,7 +26,7 @@
 .head-links{
     display: flex;
     justify-content: space-between;
-    background-color: #FFFFFF;   
+    background-color: #F5F5F5;   
     width: 100%;
     padding: 5px 20px;
 }

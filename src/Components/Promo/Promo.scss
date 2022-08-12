@@ -1,0 +1,25 @@
+// Promo Banner 
+.promo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #F5F5F5;
+}
+.signup-text{
+    font-size: 1rem;
+
+    @media (max-width: 400px){
+        font-size: .8rem;
+    }
+}
+
+.promo-link{
+    font-size: .9rem;
+    text-decoration: underline;
+
+    @media (max-width: 400px){
+        font-size: .7rem;
+    }
+}
