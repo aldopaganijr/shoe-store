@@ -9,7 +9,7 @@ const Navigation = () => {
 
   return (
     <Fragment>
-      <div className='navigation-conatiner'>
+      <div className='navigation-container'>
           <div className='head-links'>
             <Link className='logo' to="/">
               <GiFireZone />
@@ -23,10 +23,10 @@ const Navigation = () => {
               New Arrivals
             </Link>
             <Link className='links' to="/Mens">
-              Mens
+              Men
             </Link>
             <Link className='links' to="/Women">
-              Womens
+              Women
             </Link>
             <Link className='links' to="/Kids">
               Kids

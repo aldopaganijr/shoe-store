@@ -1,4 +1,10 @@
+.navigation-container{
+    max-width: 100%;
 
+    @media (max-width: 450px){
+        max-width: 95vw;
+    }
+}
 // MAIN NAV
 .main-links{
     display: flex;
@@ -22,6 +28,19 @@
     }
 }
 
+.links:hover{
+    background:
+    linear-gradient(
+      to right,
+      rgb(180,58,74),
+      rgb(180,58,74)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
 // LOGO AND SIGN IN
 .head-links{
     display: flex;
@@ -37,6 +56,7 @@
 
     @media (max-width: 450px){
         font-size: 2rem;
+
     }
 }
 

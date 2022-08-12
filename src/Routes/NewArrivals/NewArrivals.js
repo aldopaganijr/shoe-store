@@ -6,7 +6,7 @@ const NewArrivals = () => {
 
   return (
 
-    <div>
+    <div className='NewArrivals-container'>
       <BannerOne />
     </div>
 
