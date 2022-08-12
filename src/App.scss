@@ -6,8 +6,14 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    color: black;
 }
 
 h1{
     font-family: 'Lobster', cursive;
+}
+
+a:active, :visited, :link, :hover{
+    color: black;
+    text-decoration: none;
 }
