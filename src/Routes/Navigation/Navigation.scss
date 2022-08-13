@@ -1,10 +1,7 @@
 .navigation-container{
     max-width: 100%;
-
-    @media (max-width: 450px){
-        max-width: 95vw;
-    }
 }
+
 // MAIN NAV
 .main-links{
     display: flex;

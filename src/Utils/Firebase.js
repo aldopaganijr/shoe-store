@@ -1,6 +1,6 @@
 // import Firebase |  import Auth & DB needs
 import {initializeApp} from "firebase/app";
-import {getAuth, signInWithRedirect, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import {getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import {getFirestore, doc, getDoc, setDoc, collection} from "firebase/firestore"
 
 // Data from firebase account to link to webpage
@@ -16,19 +16,21 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
 
-  const provider = new GoogleAuthProvider();
+  //Create google Auth Provider
+  const googleProvider = new GoogleAuthProvider();
 
-  provider.setCustomParameters({
+  googleProvider.setCustomParameters({
     prompt: "select_account"
   })
 
-  // Creating Authorization with GoogleSignIn
+  // Creating Authorization with GoogleSignIn 
   export const auth = getAuth();
-  export const signInWithGooglePopup = () => signInWithPopup(auth, provider)
+  export const signInWithGooglePopup = () => signInWithPopup(auth, googleProvider)
 
   // Creating database
   export const db = getFirestore();
 
+  // Creating user collection
   export const createUserDocumentFromAuth = async (userAuth) => {
     const userDocRef = doc(db, 'users', userAuth.uid);
 
@@ -39,7 +41,7 @@ const firebaseConfig = {
     console.log(userSnapshot);
     console.log(userSnapshot.exists());
 
-    // Creating user collection, if it does not exist. Only runs if it does not exist 
+    //  if user collection does not exist. Only runs if it does not exist 
     if(!userSnapshot.exists()){
       const {displayName, email} = userAuth;
       const createdAt = new Date();
