@@ -1,6 +1,6 @@
 // import Firebase |  import Auth & DB needs
 import {initializeApp} from "firebase/app";
-import {getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import {getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
 import {getFirestore, doc, getDoc, setDoc, collection} from "firebase/firestore"
 
 // Data from firebase account to link to webpage
@@ -61,4 +61,11 @@ const firebaseConfig = {
 
     // if user doc does exist, return userDocRef.
     return userDocRef;
+  }
+
+  // method for creating user with email & password! 
+  export const createAuthUserWithEmailAndPassword = async (email, password) => {
+    if (!email || !password) return;
+
+    return await createUserWithEmailAndPassword(auth, email, password);
   }

@@ -13,8 +13,16 @@ const SignIn = () => {
 
   return (
 
-    <div>
-      <button on onClick={logGoogleUser}>Sign in with Google</button>
+    <div className='signincontainer'>
+      <h3 className='signinheader'>Already a member? Sign in below</h3>
+      <form className='signinform'>
+        <label>Email</label>
+        <input className='signininputs' />
+        <label>Password</label>
+        <input className='signininputs' />
+        <button className='signinbutton'>Sign In</button>
+        <button className='signingoogle' onClick={logGoogleUser}>Sign in with Google</button>
+      </form>
     </div>
 
   )
