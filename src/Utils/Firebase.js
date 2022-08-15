@@ -1,7 +1,7 @@
 // import Firebase |  import Auth & DB needs
 import {initializeApp} from "firebase/app";
 import {getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
-import {getFirestore, doc, getDoc, setDoc, collection} from "firebase/firestore"
+import {getFirestore, doc, getDoc, setDoc} from "firebase/firestore"
 
 // Data from firebase account to link to webpage
 const firebaseConfig = {
@@ -15,6 +15,7 @@ const firebaseConfig = {
   
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
+  console.log(app)
 
   //Create google Auth Provider
   const googleProvider = new GoogleAuthProvider();
@@ -30,8 +31,8 @@ const firebaseConfig = {
   // Creating database
   export const db = getFirestore();
 
-  // Creating user collection
-  export const createUserDocumentFromAuth = async (userAuth) => {
+  // Creating user collection | additional info is for the displayName
+  export const createUserDocumentFromAuth = async (userAuth, additionalInformation = {}) => {
     const userDocRef = doc(db, 'users', userAuth.uid);
 
     console.log(userDocRef)
@@ -51,7 +52,8 @@ const firebaseConfig = {
         await setDoc(userDocRef, {
           displayName,
           email,
-          createdAt
+          createdAt,
+          ...additionalInformation
         });
 
       }catch(error){
