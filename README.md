@@ -7,7 +7,7 @@
 
 - 🌱 Im currently learning **Vue**
 
-- 👨‍💻 All my projects are linked here! [https://aldopaganijr.netlify.app](https://aldopaganijr.netlify.app)
+- 👨‍💻 All my projects are linked here [https://aldopaganijr.netlify.app](https://aldopaganijr.netlify.app)
 
 - 💬 Ask me about **React**
 
