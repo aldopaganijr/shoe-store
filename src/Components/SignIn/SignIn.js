@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import "./SignIn.scss"
-import {signInWithGooglePopup} from "../../Utils/Firebase";
+import {signInWithGooglePopup, signInAuthUserWithEmailAndPassword} from "../../Utils/Firebase";
 
 // default form fields object for sign in page
 const defaultFormFields = {
@@ -38,7 +38,7 @@ const SignIn = () => {
       clearFormField();
 
     // this error block will run two different error responses then run the generic console.log
-    } catch (error){
+   } catch (error){
       switch(error.code){
         case "auth/wrong-password":
           alert('Incorrect password, please try again!');
@@ -72,7 +72,7 @@ const SignIn = () => {
         <label>Password</label>
         <input className='signininputs' onChange={handleChange} name="password" value={password} />
         <button className='signinbutton'>Sign In</button>
-        <button className='signingoogle' onClick={signInWithGoogle}>Sign in with Google</button>
+        <button className='signingoogle' type='button' onClick={signInWithGoogle}>Sign in with Google</button>
       </form>
     </div>
 

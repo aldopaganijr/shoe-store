@@ -1,6 +1,6 @@
 // import Firebase |  import Auth & DB needs
 import {initializeApp} from "firebase/app";
-import {getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from "firebase/auth";
+import {getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import {getFirestore, doc, getDoc, setDoc} from "firebase/firestore"
 
 // Data from firebase account to link to webpage
@@ -70,4 +70,10 @@ const firebaseConfig = {
     if (!email || !password) return;
 
     return await createUserWithEmailAndPassword(auth, email, password);
+  }
+
+  export const signInAuthUserWithEmailAndPassword = async (email, password) => {
+    if (!email || !password) return;
+
+    return await signInWithEmailAndPassword(auth, email, password);
   }
