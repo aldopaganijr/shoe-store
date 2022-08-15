@@ -1,11 +1,22 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useContext } from 'react'
+import {UserContext} from "../../Contexts/Users"
 import "./Navigation.scss"
 import { Outlet, Link } from 'react-router-dom'
 import {GiFireZone} from  "react-icons/gi"
-import {FaSignInAlt} from  "react-icons/fa"
+import {GoSignIn} from  "react-icons/go"
+import {GoSignOut} from  "react-icons/go"
 import Promo from  "../../Components/Promo/Promo"
+import {signOutUser} from "../../Utils/Firebase"
 
 const Navigation = () => {
+  
+  const {currentUser, setCurrentUser} = useContext(UserContext)
+
+  // function for signing out user related to firebase.js
+  const signOutHandler = async () => {
+    const res = await signOutUser();
+    setCurrentUser(null)
+  }
 
   return (
     <Fragment>
@@ -14,9 +25,14 @@ const Navigation = () => {
             <Link className='logo' to="/">
               <GiFireZone />
             </Link>
-            <Link className='top-link' to="/Authentication">
-              <FaSignInAlt />
-            </Link>
+
+            {currentUser ? (
+              <span className='top-link' onClick={signOutHandler}><GoSignOut /></span>
+            ):(
+              <Link className='top-link' to="/Authentication">
+                <GoSignIn />
+              </Link>
+            )}
           </div>
           <div className='main-links'>
             <Link className='links' to="/NewArrivals">

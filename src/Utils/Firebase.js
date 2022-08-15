@@ -1,6 +1,6 @@
 // import Firebase |  import Auth & DB needs
 import {initializeApp} from "firebase/app";
-import {getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import {getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import {getFirestore, doc, getDoc, setDoc} from "firebase/firestore"
 
 // Data from firebase account to link to webpage
@@ -72,8 +72,12 @@ const firebaseConfig = {
     return await createUserWithEmailAndPassword(auth, email, password);
   }
 
+   // method for signing user in with email & password! 
   export const signInAuthUserWithEmailAndPassword = async (email, password) => {
     if (!email || !password) return;
 
     return await signInWithEmailAndPassword(auth, email, password);
   }
+
+  // Signout function that points to signout from firebase
+  export const signOutUser = async () => await signOut(auth);
