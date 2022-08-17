@@ -1,6 +1,6 @@
 // import Firebase |  import Auth & DB needs
 import {initializeApp} from "firebase/app";
-import {getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import {getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
 import {getFirestore, doc, getDoc, setDoc} from "firebase/firestore"
 
 // Data from firebase account to link to webpage
@@ -81,3 +81,7 @@ const firebaseConfig = {
 
   // Signout function that points to signout from firebase
   export const signOutUser = async () => await signOut(auth);
+
+  // Firebase Observer
+  export const onAuthStateChangedListener = (callback) =>
+  onAuthStateChanged(auth, callback);

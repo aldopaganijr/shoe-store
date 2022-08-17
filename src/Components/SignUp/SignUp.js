@@ -1,9 +1,8 @@
-import React, {useContext} from 'react'
+
 import "./SignUp.scss"
 import status from "../../Assets/Misc/STATUS_logo_black.3c28c69a.svg"
 import { useState } from 'react'
 import {createAuthUserWithEmailAndPassword, createUserDocumentFromAuth} from "../../Utils/Firebase"
-import {UserContext} from "../../Contexts/Users"
 
 // creating a form fields object to simplify state usage.
 const defaultFormFields = {
@@ -20,10 +19,6 @@ const [formFields, setFormFields] = useState(defaultFormFields);
 
 // destructure value of defaultformfields
 const {displayName, email, password, confirmPassword} = formFields;
-
-
-  // User Context
-const {setCurrentUser} = useContext(UserContext)
 
 // function to reset form fields to original object.
 const resetFormFields = () => {
@@ -42,9 +37,6 @@ const handleSubmit = async (event) => {
   // process to register user once passwords match
   try{
     const {user} = await createAuthUserWithEmailAndPassword(email, password)
-
-    // setting current logged in user to state!
-    setCurrentUser(user)
 
     // This will create the displayName portion of our user info!
     await createUserDocumentFromAuth(user, {displayName})

@@ -1,7 +1,6 @@
-import React, {useState, useContext} from 'react'
+import React, {useState} from 'react'
 import "./SignIn.scss"
 import {signInWithGooglePopup, signInAuthUserWithEmailAndPassword} from "../../Utils/Firebase";
-import {UserContext} from "../../Contexts/Users"
 
 // default form fields object for sign in page
 const defaultFormFields = {
@@ -14,9 +13,6 @@ const SignIn = () => {
   // use state for setting form fields to start at defualt values and changed.
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
-
-  // User Context
-  const {setCurrentUser} = useContext(UserContext)
 
   // function to clear form fields after sign in.
   const clearFormField = () => {
@@ -39,8 +35,6 @@ const SignIn = () => {
         password
       );
 
-      // Setting current user to state!
-      setCurrentUser(user)
 
       clearFormField();
 
